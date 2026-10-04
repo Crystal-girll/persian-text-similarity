@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persian-text-similarity"
+version = "0.1.0"
+description = "Persian text normalization, lexical retrieval, and optional semantic similarity"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Crystal-girll"}]
+keywords = ["persian", "farsi", "nlp", "text-similarity", "tfidf"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=3.4,<6"]
+dev = ["build>=1.2,<2", "twine>=6,<7"]
+
+[project.scripts]
+persian-similarity = "persian_text_similarity.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/Crystal-girll/persian-text-similarity"
+Issues = "https://github.com/Crystal-girll/persian-text-similarity/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+persian_text_similarity = ["py.typed"]

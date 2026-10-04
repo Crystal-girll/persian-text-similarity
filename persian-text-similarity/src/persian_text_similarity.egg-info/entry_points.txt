@@ -1,0 +1,2 @@
+[console_scripts]
+persian-similarity = persian_text_similarity.__main__:main

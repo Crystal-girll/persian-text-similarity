@@ -1,0 +1,7 @@
+
+[dev]
+build<2,>=1.2
+twine<7,>=6
+
+[semantic]
+sentence-transformers<6,>=3.4
